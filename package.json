@@ -9,7 +9,13 @@
         "url": "https://skating-fool.github.io/SkatingFool-VRC-Stuff/"
     },
     "gitDependencies": {},
-    "vpmDependencies": {"com.poiyomi.toon": ">=10.0.20"},
+    "vpmDependencies": {
+		"com.poiyomi.toon": ">=10.0.20",
+		"vrchat.blackstartx.gesture-manager": "*",
+		"com.llealloo.audiolink": "*",
+		"at.pimaker.ltcgi": "*",
+		"red.sim.lightvolumes": "*"
+	},
     "legacyFolders": {},
     "legacyFiles": {},
     "legacyPackages": [],
