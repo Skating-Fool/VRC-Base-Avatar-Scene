@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: dev_measurewall01d
-  m_Shader: {fileID: 4800000, guid: b5127b968db74da4695bf0bb44cedabb, type: 3}
+  m_Shader: {fileID: 4800000, guid: 50857d4062e5ca54c937ccf21d7b4400, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -65,6 +65,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisoColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AnisotropyDirectionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -771,8 +775,11 @@ Material:
     - _AnisoUseBaseColor: 0
     - _AnisoUseLightColor: 1
     - _Anisotropy: 0
+    - _AnisotropyDirectionEnabled: 0
+    - _AnisotropyDirectionMapUV: 0
     - _AnisotropyMapChannel: 0
     - _AnisotropyMapUV: 0
+    - _AnisotropyMapVertexColor: 0
     - _Ap_Rim2Light_FeatherOff: 0
     - _Ap_Rim2Light_Power: 0.1
     - _Ap_RimLight_FeatherOff: 0
@@ -1031,13 +1038,21 @@ Material:
     - _ClearcoatExposureOcclusion: 0
     - _ClearcoatFresnelStrength: 0.5
     - _ClothLerp: 0
+    - _ClothMaskGlobalMask: 0
+    - _ClothMaskGlobalMaskBlendType: 2
     - _ClothMetallic: 0
+    - _ClothMetallicGlobalMask: 0
+    - _ClothMetallicGlobalMaskBlendType: 2
     - _ClothMetallicSmoothnessMapInvert: 0
     - _ClothMetallicSmoothnessMapUV: 0
     - _ClothPBRInfo: 0
     - _ClothReflectance: 0.5
+    - _ClothReflectanceGlobalMask: 0
+    - _ClothReflectanceGlobalMaskBlendType: 2
     - _ClothShadingWarning: 0
     - _ClothSmoothness: 0.5
+    - _ClothSmoothnessGlobalMask: 0
+    - _ClothSmoothnessGlobalMaskBlendType: 2
     - _ColorGradingToggle: 0
     - _ColorMask: 15
     - _ColorThemeIndex: 0
@@ -2173,7 +2188,9 @@ Material:
     - _LightingAdditiveType: 3
     - _LightingCap: 1
     - _LightingCapEnabled: 1
+    - _LightingCapLuminance: 0
     - _LightingCastedShadows: 1
+    - _LightingCleanCastedShadows: 0
     - _LightingColorMode: 0
     - _LightingDebugVisualize: 0
     - _LightingDetailShadowMapsUV: 0
@@ -2242,6 +2259,7 @@ Material:
     - _MainBrightnessGlobalMask: 0
     - _MainBrightnessGlobalMaskBlendType: 2
     - _MainChromatize: 0
+    - _MainColorAdjustClamp: 1
     - _MainColorAdjustTextureUV: 0
     - _MainColorAdjustToggle: 0
     - _MainGamma: 1
@@ -3070,7 +3088,14 @@ Material:
     - _ShadowBlur: 0.1
     - _ShadowBorder: 0.5
     - _ShadowBorderMapToggle: 0
+    - _ShadowBorderMaskGlobalMask: 0
+    - _ShadowBorderMaskGlobalMaskBlendType: 2
     - _ShadowBorderMaskLOD: 0
+    - _ShadowBorderMaskMode: 0
+    - _ShadowBorderMaskStrengthA: 0
+    - _ShadowBorderMaskStrengthB: 0
+    - _ShadowBorderMaskStrengthG: 0
+    - _ShadowBorderMaskStrengthR: 1
     - _ShadowBorderMaskUV: 0
     - _ShadowBorderRange: 0
     - _ShadowColorTexAddition: 0
@@ -3086,6 +3111,8 @@ Material:
     - _ShadowReceive: 0
     - _ShadowStrength: 1
     - _ShadowStrengthMaskUV: 0
+    - _SkinDiffuseSoftnessEnabled: 0
+    - _SkinScatteringStability: 0
     - _SkinThicknessMapInvert: 0
     - _SkinThicknessMapUV: 0
     - _SkinThicknessPower: 1
@@ -3308,6 +3335,7 @@ Material:
     - _UzumoreEnabled: 1
     - _UzumoreMaskChannel: 3
     - _UzumoreMaskUV: 3
+    - _UzumoreObjectScale: 1
     - _VertexAudioLinkEnabled: 0
     - _VertexBarrelAlpha: 0
     - _VertexBarrelHeight: 0
@@ -3735,6 +3763,7 @@ Material:
     - s_end_CameraVisibilityVRC: 0
     - s_end_CenterOutDissolve: 0
     - s_end_ClearCoatTPSMaskGroup: 0
+    - s_end_ClothGlobalMask: 0
     - s_end_ColorAdjustColorGrading: 0
     - s_end_ContinuousAnimation: 0
     - s_end_CubeMapColorAdjust: 0
@@ -4042,6 +4071,7 @@ Material:
     - s_start_CameraVisibilityVRC: 1
     - s_start_CenterOutDissolve: 0
     - s_start_ClearCoatTPSMaskGroup: 0
+    - s_start_ClothGlobalMask: 0
     - s_start_ColorAdjustColorGrading: 0
     - s_start_ContinuousAnimation: 0
     - s_start_CubeMapColorAdjust: 0
@@ -4325,6 +4355,8 @@ Material:
     - ss_end_ALVertexHeight: 0
     - ss_end_Aniso0ToonModeSS: 0
     - ss_end_Aniso1ToonModeSS: 0
+    - ss_end_Antipodean_Rim2_SubSection: 0
+    - ss_end_Antipodean_Rim_SubSection: 0
     - ss_end_AudioLinkRim2ColorOverrideS: 0
     - ss_end_AudioLinkRimColorOverrideS: 0
     - ss_end_AudioLinkVoronoiInnerColorOverride: 0
@@ -4416,6 +4448,8 @@ Material:
     - ss_start_ALVertexHeight: 0
     - ss_start_Aniso0ToonModeSS: 0
     - ss_start_Aniso1ToonModeSS: 0
+    - ss_start_Antipodean_Rim2_SubSection: 0
+    - ss_start_Antipodean_Rim_SubSection: 0
     - ss_start_AudioLinkRim2ColorOverrideS: 0
     - ss_start_AudioLinkRimColorOverrideS: 0
     - ss_start_AudioLinkVoronoiInnerColorOverride: 0
@@ -4528,6 +4562,7 @@ Material:
     - _Aniso0Tint: {r: 1, g: 1, b: 1, a: 1}
     - _Aniso1Tint: {r: 1, g: 1, b: 1, a: 1}
     - _AnisoColorMapPan: {r: 0, g: 0, b: 0, a: 0}
+    - _AnisotropyDirectionMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _AnisotropyMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _Ap_Rim2LightColor: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}

@@ -826,10 +826,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1956522772}
-    - target: {fileID: 1355527915007367892, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4e68f88994bcfa649b711d9cc7fe41f4, type: 2}
     - target: {fileID: 1979033027770376715, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
       propertyPath: m_Name
       value: World
@@ -840,43 +836,7 @@ PrefabInstance:
       objectReference: {fileID: 1956522772}
     - target: {fileID: 3825939050266320092, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
       propertyPath: m_VersionIndex
-      value: 5397
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692918142510342507, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1e74fdd05e649744cbc60075943b0d88, type: 2}
-    - target: {fileID: 4692918142510342507, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5aab74ffa85d92148b344aeee972cb25, type: 2}
-    - target: {fileID: 5380345965120321777, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5380345965120321777, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: ConeFalloff
-      value: 7.464101
-      objectReference: {fileID: 0}
-    - target: {fileID: 5380345965120321777, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: ShadowMapID
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5380345965120321777, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: ShadowMapTexture
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919527534098017730, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: Resolution.x
-      value: 48
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919527534098017730, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: Resolution.y
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919527534098017730, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: Resolution.z
-      value: 47
+      value: 5409
       objectReference: {fileID: 0}
     - target: {fileID: 6714683543186935984, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
       propertyPath: m_Mesh
@@ -888,36 +848,8 @@ PrefabInstance:
       objectReference: {fileID: 533465777}
     - target: {fileID: 7863505801490989795, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
       propertyPath: m_VersionIndex
-      value: 6784
+      value: 6796
       objectReference: {fileID: 0}
-    - target: {fileID: 7992866564534573745, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: ShadowTextures
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7992866564534573745, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: ShadowMapsCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7992866564534573745, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: CubemapFaceMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7992866564534573745, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: LightVolumeInstances.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7992866564534573745, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: LightVolumeInstances.Array.data[0]
-      value: 
-      objectReference: {fileID: 8548991380715085834}
-    - target: {fileID: 7992866564534573745, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: PointLightVolumeInstances.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7992866564534573745, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-      propertyPath: PointLightVolumeInstances.Array.data[0]
-      value: 
-      objectReference: {fileID: 8548991380715085833}
     - target: {fileID: 9008421637054273115, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -988,28 +920,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9039866961140539029, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
   m_PrefabInstance: {fileID: 8548991380715085827}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8548991380715085833 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5380345965120321777, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-  m_PrefabInstance: {fileID: 8548991380715085827}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 064ede0cbb894e94abe683cb8db91f6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8548991380715085834 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5919527534098017730, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}
-  m_PrefabInstance: {fileID: 8548991380715085827}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21bc8ec8ba5e5f3408667533e591f313, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &8548991380715085835 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7430213138902074500, guid: 6ff7b51bd6375d0498e7e0f9001b5448, type: 3}

@@ -535,6 +535,7 @@ MonoBehaviour:
   AdaptiveResolution: 1
   VoxelsPerUnit: 3
   Resolution: {x: 48, y: 14, z: 47}
+  BakeryVolume: {fileID: 0}
   LightVolumeInstance: {fileID: 5919527534098017730}
   LightVolumeSetup: {fileID: 5046795875113926672}
 --- !u!114 &5919527534098017730
@@ -553,7 +554,20 @@ MonoBehaviour:
   IsAdditive: 0
   Color: {r: 1, g: 1, b: 1, a: 1}
   Intensity: 1
+  SmoothBlending: 0.25
   InvLocalEdgeSmoothing: {x: 64.06534, y: 19.062641, z: 62.021645, w: 0}
+  Texture0: {fileID: 0}
+  Texture1: {fileID: 0}
+  Texture2: {fileID: 0}
+  BakeryVolume: {fileID: 0}
+  Exposure: 0
+  Shadows: 0
+  Highlights: 0
+  Bake: 1
+  ReserveUVSpace: 0
+  AdaptiveResolution: 1
+  VoxelsPerUnit: 3
+  Resolution: {x: 48, y: 14, z: 47}
   BoundsUvwMin0: {x: 0.02, y: 0.0625, z: 0.006802721, w: 0.96000004}
   BoundsUvwMin1: {x: 0.02, y: 0.0625, z: 0.34013605, w: 0.875}
   BoundsUvwMin2: {x: 0.02, y: 0.0625, z: 0.67346936, w: 0.3197279}
@@ -2392,7 +2406,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 6766
+  m_VersionIndex: 6793
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2445,7 +2459,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 835ecb037c25ddf4b8f5cbf6e22a611e, type: 2}
+  - {fileID: 2100000, guid: 4e68f88994bcfa649b711d9cc7fe41f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2613,7 +2627,6 @@ MonoBehaviour:
   LayerMask:
     serializedVersion: 2
     m_Bits: 270849
-  ObjectMask: []
   Bias: 0.1
   NearPlane: 0.01
   FarPlane: 0
@@ -2648,7 +2661,7 @@ MonoBehaviour:
   Width: 1
   Direction: {x: 0, y: -0.7762665, z: -0.63040507}
   Rotation: {x: 0, y: -0, z: -0, w: 1}
-  ConeFalloff: 11.850894
+  ConeFalloff: 7.464101
   Angle: 0.5235988
   OuterAngleCos: 0.8660254
   OuterAngleTan: 0.57735026
@@ -2659,22 +2672,22 @@ MonoBehaviour:
   LightVolumeManager: {fileID: 7992866564534573745}
   RegistryOrder: 0
   RegistryWeight: 0
-  IsActive: 0
+  IsActive: 1
   CustomTexture: {fileID: 0}
   CustomTextureMaterial: {fileID: 0}
-  ProjectionType: 0
   ProjectionMode: 0
   AutoUpdateCustomTexture: 0
-  ShadowMapTexture: {fileID: 2800000, guid: c144eb999c6650b458b9636d6b281f35, type: 2}
+  ShadowMapTexture: {fileID: 0}
   ShadowMapMaterial: {fileID: 0}
   AutoUpdateShadowMap: 0
-  ShadowMapID: 0
+  ShadowMapID: -1
   WorldSpaceShadows: 0
   ShadowBakePosition: {x: -3.25, y: 3.25, z: 2.25}
   ShadowBakeRotation: {x: 0.9028857, y: -0, z: -0, w: 0.42988086}
   LayerMask: 270849
   NearClip: 0.01
   FarClip: 161.26115
+  BakedFarClip: 0
   Bias: 0.1
   Blur: 1
   ContactHardening: 0
@@ -2682,15 +2695,26 @@ MonoBehaviour:
   RuntimeShadowResolution: 512
   RuntimeShadowBlurSamplePreset: 2
   RuntimeShadowSphericalBlur: 1
-  RuntimeShadowFacesPerFrame: 6
-  RuntimeShadowDirectOutput: 0
-  CustomTextureIsCubemap: 0
-  CustomTextureHasDepthSlices: 0
+  Projection: 0
+  Range: 10
+  Falloff: 1
+  FalloffLUT: {fileID: 0}
+  Cookie: {fileID: 0}
+  Cubemap: {fileID: 0}
+  BakeIntoProbes: 0
+  DebugRange: 0
+  Shadows: 0
+  RebakeShadows: 1
+  ExclusionMask: []
+  DebugClipPlanes: 0
+  ForceCubemapShadows: 0
+  ShadowMap: {fileID: 0}
   ShadowMapTextureIsCubemap: 0
   ShadowMapTextureHasDepthSlices: 0
   ShadowMapUsesCubemap: 0
   IsRangeDirty: 0
   AreaCookieMirror: 1
+  ShadowBakeResolution: 0
 --- !u!1 &6235939837473638251
 GameObject:
   m_ObjectHideFlags: 0
@@ -12549,7 +12573,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5379
+  m_VersionIndex: 5406
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -12602,8 +12626,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 53834f677fa347942ada84bbca668524, type: 2}
-  - {fileID: 2100000, guid: 57672e2943bb8504b9e30bcb003e3e23, type: 2}
+  - {fileID: 2100000, guid: 1e74fdd05e649744cbc60075943b0d88, type: 2}
+  - {fileID: 2100000, guid: 5aab74ffa85d92148b344aeee972cb25, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13275,7 +13299,7 @@ LightProbeGroup:
   m_Dering: 1
 --- !u!1 &9034184085610417704
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13292,7 +13316,7 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &-2378023273703942077
 Transform:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13307,7 +13331,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &2286304549124040389
 Camera:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13415,6 +13439,11 @@ MonoBehaviour:
   ShadowBleedReduction: 0.2
   ShadowMinVariance: 1
   ShadowMinVarianceMobile: 1
+  Clustering: 1
+  FroxelDensity: 1
+  FroxelSlices: 100
+  FroxelCoarse: 4
+  ClusteringMinLights: 8
   BakingMode: 0
   VolumeBitmask: 1
   ProbeBitmask: 1
@@ -13459,14 +13488,40 @@ MonoBehaviour:
   ShadowTextureFormat: 1
   ShadowBleedReduction: 0.2
   ShadowMinVariance: 1
+  Clustering: 1
+  FroxelDensity: 1
+  FroxelSlices: 100
+  FroxelCoarse: 4
+  ClusteringMinLights: 8
+  ShadowCulling: 0
   LightProbesBlending: 1
   SharpBounds: 1
   AutoUpdateVolumes: 1
   AutoUpdateTextures: 1
   AdditiveMaxOverdraw: 4
   ForceSceneLighting: 0
-  LightVolumeInstances: []
-  PointLightVolumeInstances: []
+  ShaderStripping: 1
+  AutoShaderFeatures: 1
+  ShaderFeatures: 131071
+  ShaderFeaturesSchema: 0
+  BakingMode: 0
+  VolumeBitmask: 1
+  ProbeBitmask: 1
+  Denoise: 1
+  DilateInvalidProbes: 1
+  DilationIterations: 1
+  DilationBackfaceBias: 0.1
+  FixLightProbesL1: 1
+  DownscaleVolumes: 0
+  ShadowMinVarianceDesktop: 0
+  ShadowMinVarianceMobile: 1
+  AtlasPostProcessorTargets: []
+  AtlasPostProcessorMaterials: []
+  AtlasPostProcessorTextureNames: []
+  LightVolumeInstances:
+  - {fileID: 5919527534098017730}
+  PointLightVolumeInstances:
+  - {fileID: 5380345965120321777}
   CustomTextures: {fileID: 0}
   CubemapsCount: 0
   ShadowTextures: {fileID: 0}
@@ -13480,6 +13535,8 @@ MonoBehaviour:
   RuntimeShadowBlurUniformKeyword: -1
   RuntimeShadowBlurDirectKeyword: -1
   RuntimeShadowBlurSphericalKeyword: -1
+  ClusteringMaterial: {fileID: 0}
+  ShadowCullingMaterial: {fileID: 0}
   HasAutoCustomTextureUpdates: 0
   HasAutoShadowTextureUpdates: 0
 --- !u!1 &9039866961140539029
@@ -13639,7 +13696,7 @@ GameObject:
   - component: {fileID: 4528001012346180483}
   - component: {fileID: 7430213138902074500}
   - component: {fileID: 1650646352655909769}
-  - component: {fileID: 2928567027974053165}
+  - component: {fileID: 15071406801328049}
   m_Layer: 21
   m_Name: Dummy
   m_TagString: Untagged
@@ -13735,7 +13792,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2928567027974053165
+--- !u!114 &15071406801328049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
