@@ -1,0 +1,44 @@
+name: Make Package
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+ 
+      - name: Read name and version from package.json
+        id: pkg
+        run: |
+          NAME=$(jq -r '.name' package.json)
+          VERSION=$(jq -r '.version' package.json)
+          # Make the name safe for a filename (e.g. @scope/pkg -> scope-pkg)
+          SAFE_NAME=$(echo "$NAME" | sed 's/^@//; s#/#-#g')
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "zip_name=${SAFE_NAME}_v${VERSION}.zip" >> "$GITHUB_OUTPUT"
+ 
+      - name: Create zip of main
+        run: |
+          git archive --format=zip --output="${{ steps.pkg.outputs.zip_name }}" HEAD
+ 
+      - name: Upload zip artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ steps.pkg.outputs.zip_name }}
+          path: ${{ steps.pkg.outputs.zip_name }}
+ 
+      - name: Attach zip to GitHub release
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: v${{ steps.pkg.outputs.version }}
+          target_commitish: main
+          name: v${{ steps.pkg.outputs.version }}
+          files: ${{ steps.pkg.outputs.zip_name }}
